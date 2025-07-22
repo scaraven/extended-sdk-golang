@@ -1,8 +1,8 @@
 package sdk
 
 /*
-#cgo LDFLAGS: -L${SRCDIR}/rust-lib/target/release -lorderffi
-#cgo LDFLAGS: -Wl,-rpath,$ORIGIN/rust-lib/target/release
+#cgo LDFLAGS: -L${SRCDIR} -lorderffi
+#cgo LDFLAGS: -Wl,-rpath,$ORIGIN
 #include <stdlib.h>
 
 char* get_order_hash_ffi(
