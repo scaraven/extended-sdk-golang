@@ -1,6 +1,7 @@
 package sdk
 
 import (
+	"log"
 	"testing"
 )
 
@@ -22,4 +23,11 @@ func TestGoGetOrderHash(t *testing.T) {
 	if hash != expected {
 		t.Errorf("GetOrderHash returned incorrect hash.\nExpected: %s\nGot:      %s", expected, hash)
 	}
+
+	sig, err := SignMessage(hash, "0x1234def56789012345678901234567890123456789012345678901234567890")
+	if err != nil {
+		t.Fatalf("SignMessage failed: %v", err)
+	}
+
+	log.Printf("Signature: %s", sig)
 }

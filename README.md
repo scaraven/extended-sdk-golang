@@ -89,10 +89,10 @@ func main() {
     fmt.Println("Order hash:", hash)
     
     // Sign a message
-    signature, err := sdk.SignMessage("0x1234", "your_private_key_hex")
-    if err != nil {
-        log.Fatal(err)
-    }
+    sig, err := sdk.SignMessage(hash, "0x1234def56789012345678901234567890123456789012345678901234567890")
+	if err != nil {
+		log.Fatal("SignMessage failed: %v", err)
+	}
     fmt.Println("Signature:", signature)
 }
 ```
