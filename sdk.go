@@ -78,7 +78,7 @@ func GetOrderHash(
 
 // SignMessage signs a message using the provided private key.
 // It returns the signature as a hex string, where v, r and s are concatenated as left-padded 64-character hex strings.
-// The signature is in the format: 0x{r}{s}{v}
+// The signature is in the format: {r}{s}{v}
 func SignMessage(messageHex, privateKeyHex string) (string, error) {
 	cmsg := C.CString(messageHex)
 	defer C.free(unsafe.Pointer(cmsg))
