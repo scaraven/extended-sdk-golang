@@ -43,6 +43,8 @@ cargo build --release
 
 This will generate the shared library at `rust-lib/target/release/liborderffi.so` (Linux) or equivalent for your platform. You must then copy the library to the source directory.
 
+Alternatively, run `build-lib.sh` in the root directory.
+
 ## Running Tests
 
 After building the Rust library, you must ensure to allow the go compiler to find the library by setting the library environment variable
