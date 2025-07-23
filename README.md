@@ -1,5 +1,8 @@
 # Golang Ex10 SDK
 
+# ⚠️ PLEASE READ
+This repository has been moved to the extended organisation [repository](https://github.com/extended-protocol/extended-sdk-golang). Considering using that instead as it will be more actively maintained.
+
 ## Introduction
 
 This is a simple golang interface around the extended exchange rust sdk [here](https://github.com/x10xchange/rust-crypto-lib-base). The SDK provides Go bindings for cryptographic operations including order hash generation and message signing for the extended exchange protocol.
